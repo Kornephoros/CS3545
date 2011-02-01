@@ -13,7 +13,7 @@ double Magnitude(vec3_t v1);	// Magnitude must be written aside from the other m
 
 //declare some vectors
 vec3_t vec1, vec2, vec3;
-
+double output;
 
 int main(void)
 {
@@ -36,12 +36,8 @@ int main(void)
 		printf("%g ", vec3[i]);
 	}
 
-	DotProduct(vec1,vec2,vec3);
-	printf("\nDot product: ");
-	for(i = 0; i < sizeof(vec3)/sizeof(int); i++)
-	{
-		printf("%g ", vec3[i]);
-	}
+	DotProduct(vec1,vec2,output);
+	printf("\nDot product: %g", output);
 
 	Scaling(vec1, 2);
 	printf("\nScaling by 2: ");
